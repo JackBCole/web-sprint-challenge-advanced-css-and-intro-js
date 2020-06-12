@@ -235,13 +235,13 @@ function getArtistByIndex(array, index) {
 
  function get20s(data){
   const newArr = [];
-  newArr[data];
+  data = artists.years;
    for(i=0; i< artists.length; i++){
-    if(artists.years > '1900' && artists.years < '2000' ){
-       newArr.push(artists[i].name);
+    if(artists.years > '1900'){
+       newArr.push(artists.name);
     }
    }
-   return data;
+   return newArr;
  }
  console.log(get20s());
 
@@ -256,7 +256,7 @@ function getArtistByIndex(array, index) {
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 function removeArtist(array, index) {
-    array.slice(array[index],)
+    array.splice()
     console.log(artists.length)
     return array
   }
@@ -278,12 +278,12 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should console.log() the new array with information added"*/
 
-function addArtist(/* Code here */){
+function addArtist(id, name, years, genre, nationality, bio){
 
-    /* Code here */
-
+    
+  return {id, name, years, genre, nationality, bio}
   }
-
+console.log(addArtist(21, "Jack", "2000-2020", "web design", "American", "lorem ipsum. lorem ipsum. lorem ipsum. lorem ipsum."))
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
