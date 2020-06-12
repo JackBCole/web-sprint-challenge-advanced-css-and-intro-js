@@ -256,11 +256,11 @@ function getArtistByIndex(array, index) {
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 function removeArtist(array, index) {
-    array.splice()
+    array.splice([index])
     console.log(artists.length)
     return array
   }
-  console.log(removeArtist(artists))
+  console.log(removeArtist(artists, 3))
   /**
 
 
@@ -296,7 +296,7 @@ function lotsOfArt(){
 let newerArr = [];
   for(i=0; i< artists.length; i++){
     if(artists.paintings > 100){
-      console.log(artists.name)
+      newArr.push(artists.name)
     }
   }
   return newerArr
